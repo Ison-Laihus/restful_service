@@ -1,0 +1,35 @@
+{
+  "api": [
+    {
+      "id": 1,
+      "description": "See the structure of table user",
+      "url": "/user/structure"
+    },
+    {
+      "id": 2,
+      "description": "Get all users from table user",
+      "url": "/user/all"
+    },
+    {
+      "id": 3,
+      "description": "Get one user by user id",
+      "url": "/user/:id"
+    },
+    {
+      "id": 4,
+      "description": "Add one user to table user",
+      "url": "/user"
+    },
+    {
+      "id": 5,
+      "description": "modify one user by id in table user",
+      "url": "/user/:id"
+    },
+    {
+      "id": 6,
+      "description": "Delete one user by id in table user",
+      "url": "/user/:id"
+    },
+
+  ]
+}

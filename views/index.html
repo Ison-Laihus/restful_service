@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block main%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    All Services
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>ID</th>
+                            <th>Description</th>
+                            <th>Operation</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>See the structure of table user</td>
+                            <td><button class="btn btn-primary" onclick="requestURL(1)">see</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Get all users from table user</td>
+                            <td><button class="btn btn-primary" onclick="requestURL(2)">see</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Get one user by user id</td>
+                            <td><button class="btn btn-primary" onclick="requestURL(3)">see</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Add one user to table user</td>
+                            <td><button class="btn btn-primary" onclick="requestURL(4)">see</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>modify one user by id in table user</td>
+                            <td><button class="btn btn-primary" onclick="requestURL(5)">see</button></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Delete one user by id in table user</td>
+                            <td><button class="btn btn-primary" onclick="requestURL(6)">see</button></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    Result
+                </div>
+                <div class="panel-body">
+                    <div id="content0" class="a-hide">
+                        <p>Click the button in the left table</p>
+                        <p>And there will show result or operation page for you</p>
+                        <p>Let's try!</p>
+                    </div>
+                    <div id="content1" class="a-hide"></div>
+                    <div id="content2" class="a-hide"></div>
+                    <div id="content3" class="a-hide">
+                        <div class="form-group">
+                            <p>the max id is <span id="maxId1"></span></p>
+                            <p>id to search</p>
+                            <input type="text" class="form-control" id="id1" required>
+                            <button class="btn btn-warning" onclick="searchRecord()">Search</button>
+                            <div id="sub1"></div>
+                        </div>
+                    </div>
+                    <div id="content4" class="a-hide">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">年龄</label>
+                            <input type="text" class="form-control" id="age" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sex">性别</label>
+                            <select id="sex" class="form-control">
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-warning" onclick="addRecord()">Add</button>
+                        </div>
+                        <div id="sub2"></div>
+                    </div>
+                    <div id="content5" class="a-hide">
+                        <div class="form-group">
+                            <label for="id2">ID</label>
+                            <select id="id2" class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="name2">姓名</label>
+                            <input type="text" class="form-control" id="name2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age2">年龄</label>
+                            <input type="text" class="form-control" id="age2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sex2">性别</label>
+                            <select id="sex2" class="form-control">
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-warning" onclick="modifyRecord()">Modify</button>
+                        </div>
+                        <div id="sub3"></div>
+                    </div>
+                    <div id="content6" class="a-hide">
+                        <div class="form-group">
+                            <p>the max id is <span id="maxId"></span></p>
+                            <p>id to delete</p>
+                            <input type="text" class="form-control" id="id" required>
+                            <button class="btn btn-warning" onclick="deleteRecord()">Delete</button>
+                            <div id="sub"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+# ignore modules
+node_modules
+
+# ignore .git
+.git
+
+# ignore IDEA configure folder
+.idea
